@@ -62,3 +62,7 @@ It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accur
 * Secure interactions are handled with JWT tokens.
 
 
+
+##🌐 Demo Link
+
+###🔗 Live Demo: [https://shruthi018.github.io/HerbalBot/herbalBot/frontend/index.html]
