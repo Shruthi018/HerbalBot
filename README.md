@@ -6,6 +6,7 @@
 It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accurate and personalized herbal suggestions.
 
 
+
 ### 🚀 Features
 
 * 💬 **Interactive Chatbot:** Provides herbal recommendations for health concerns.
@@ -14,6 +15,7 @@ It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accur
 * 🧑‍💻 **Admin Dashboard:** Allows administrators to manage herbal data, feedback, and projects.
 * 💾 **Database Integration:** Stores herbs, users, feedback, and project information.
 * 🎨 **Responsive Frontend:** Built using HTML, CSS, and JavaScript.
+
 
 
 ### 🧩 Tech Stack
@@ -25,6 +27,7 @@ It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accur
 | **Database** | MySQL                                |
 | **Security** | JWT Authentication                   |
 | **AI/ML**    | Fuzzy Logic, Machine Learning Models |
+
 
 
 ### ⚙️ Installation and Setup
@@ -48,6 +51,7 @@ It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accur
    mvn spring-boot:run
    
 4. Open `frontend/index.html` in a browser to interact with the chatbot.
+
 
 
 ### 🧠 How It Works
