@@ -1,13 +1,13 @@
 ## 🪴 HerbalBot
 
-### 🌿 Overview
+## 🌿 Overview
 
 **HerbalBot** is an intelligent chatbot designed to assist users in finding suitable herbal remedies and health advice based on symptoms and conditions.
 It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accurate and personalized herbal suggestions.
 
 
 
-### 🚀 Features
+## 🚀 Features
 
 * 💬 **Interactive Chatbot:** Provides herbal recommendations for health concerns.
 * 🌱 **AI & Fuzzy Logic Integration:** Uses `HerbalMlService` and `FeedbackFuzzyService` for decision-making.
@@ -18,7 +18,7 @@ It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accur
 
 
 
-### 🧩 Tech Stack
+## 🧩 Tech Stack
 
 | Layer        | Technology                           |
 | ------------ | ------------------------------------ |
@@ -30,7 +30,7 @@ It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accur
 
 
 
-### ⚙️ Installation and Setup
+## ⚙️ Installation and Setup
 
 #### Prerequisites
 
@@ -54,7 +54,7 @@ It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accur
 
 
 
-### 🧠 How It Works
+## 🧠 How It Works
 
 * The chatbot collects user input (symptoms, preferences).
 * The backend applies **fuzzy logic** and **ML models** via the `HerbalMlService`.
