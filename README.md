@@ -1,4 +1,4 @@
-## 🪴 HerbalBot
+# 🪴 HerbalBot
 
 ## 🌿 Overview
 
@@ -64,7 +64,5 @@ It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accur
 
 
 ## 🌐 Demo Link
-
-### 🔗 Live Demo: 
 
    https://shruthi018.github.io/HerbalBot/herbalBot/frontend/index.html
