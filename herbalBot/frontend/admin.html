@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuzzy Logic Feedback Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background: #f5f7fa; padding: 20px; min-height: 100vh; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 30px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2e7d32; margin-bottom: 10px; font-size: 2.5em; }
+        .subtitle { color: #666; font-size: 1.2em; }
+        .controls { display: flex; gap: 15px; margin-bottom: 25px; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; background: #2e7d32; color: white; font-size: 1em; transition: all 0.3s; }
+        .btn:hover { background: #1b5e20; transform: translateY(-2px); }
+        .dashboard { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+        .panel { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .panel-title { color: #2e7d32; margin-bottom: 20px; text-align: center; font-size: 1.5em; }
+        .chart-container { height: 400px; position: relative; }
+        .stats-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .stat-card { background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center; border-left: 4px solid #2e7d32; }
+        .stat-value { font-size: 2em; font-weight: bold; color: #2e7d32; margin-bottom: 5px; }
+        .stat-label { color: #666; font-size: 0.9em; }
+        .feedback-list { max-height: 500px; overflow-y: auto; padding: 10px; }
+        .feedback-item { background: #f8f9fa; padding: 15px; margin-bottom: 12px; border-radius: 10px; border-left: 5px solid #2e7d32; transition: transform 0.2s; }
+        .feedback-item:hover { transform: translateX(5px); }
+        .feedback-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .feedback-score { font-weight: bold; font-size: 1.1em; }
+        .feedback-project { background: #e3f2fd; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; color: #1976d2; }
+        .positive { color: #4caf50; border-left-color: #4caf50; }
+        .neutral { color: #ff9800; border-left-color: #ff9800; }
+        .negative { color: #f44336; border-left-color: #f44336; }
+        .loading { text-align: center; color: #666; padding: 40px; font-size: 1.1em; }
+        .error { text-align: center; color: #f44336; padding: 20px; background: #ffebee; border-radius: 8px; margin: 10px 0; }
+        .success { text-align: center; color: #4caf50; padding: 10px; background: #e8f5e9; border-radius: 8px; margin: 10px 0; }
+
+        @media (max-width: 968px) {
+            .dashboard { grid-template-columns: 1fr; }
+            .stats-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Fuzzy Logic Analysis</h1>
+        <p class="subtitle">Complete Feedback Sentiment Analysis Dashboard</p>
+    </header>
+
+    <div class="controls">
+        <button class="btn" onclick="loadAllFeedbackData()">Load All Feedback Data</button>
+        <button class="btn" onclick="toggleFeedbackMarkers()">Toggle Feedback Markers</button>
+    </div>
+
+    <div id="statusMessage"></div>
+
+    <div class="dashboard">
+        <div class="panel">
+            <h2 class="panel-title">Feedback Analysis</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalFeedback">0</div>
+                    <div class="stat-label">Total Feedback</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="positiveCount">0</div>
+                    <div class="stat-label">Positive</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="averageScore">0.00</div>
+                    <div class="stat-label">Average Score</div>
+                </div>
+            </div>
+            <div class="feedback-list" id="feedbackList">
+                <div class="loading">Click "Load All Feedback Data" to load all feedback</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2 class="panel-title">Fuzzy Logic Analysis</h2>
+            <div class="chart-container">
+                <canvas id="analysisChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
