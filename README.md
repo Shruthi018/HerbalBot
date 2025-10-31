@@ -63,6 +63,8 @@ It leverages **AI-driven logic** and **Fuzzy Logic algorithms** to provide accur
 
 
 
-##🌐 Demo Link
+## 🌐 Demo Link
 
-###🔗 Live Demo: [https://shruthi018.github.io/HerbalBot/herbalBot/frontend/index.html]
+### 🔗 Live Demo: 
+
+   https://shruthi018.github.io/HerbalBot/herbalBot/frontend/index.html
